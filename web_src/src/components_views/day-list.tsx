@@ -61,9 +61,10 @@ const DayList: React.FC<DayListProps> = ({ children, dayId, ...props }) => {
     }, [closingHour, openingHour, reservations]);
 
     return <div>
-        {times.map(time => {
-
-        })}
+        {times.map(time =>
+            <Slot
+            />
+        )}
     </div>
 }
 
