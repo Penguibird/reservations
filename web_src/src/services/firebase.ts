@@ -1,7 +1,8 @@
 
 import { initializeApp, getApp } from "firebase/app";
-import { initializeFirestore, connectFirestoreEmulator } from "firebase/firestore";
+import { initializeFirestore, connectFirestoreEmulator, collection, doc } from "firebase/firestore";
 import { connectFunctionsEmulator, getFunctions } from "firebase/functions";
+import { APPID } from "../constants/variables";
 
 const firebaseConfig = {
     apiKey: "AIzaSyBFjmwM4CHsOVXtsgjPIEPY2whnPJIODyo",
@@ -14,7 +15,8 @@ const firebaseConfig = {
 
 export const app = initializeApp(firebaseConfig);
 
-export const firestore = initializeFirestore(app, {});
+const firestore = initializeFirestore(app, {});
+export const firestoreData = doc(firestore, `apps/${APPID}`);
 
 export const functions = getFunctions(app)
 
