@@ -2,15 +2,16 @@ import Person from "./Person";
 
 interface SlotBase {
     type: string
+    time: number
 }
 
-interface EmptySlot extends SlotBase {
+export interface EmptySlot extends SlotBase {
     type: "empty"
 }
-interface PendingSlot extends SlotBase {
+export interface PendingSlot extends SlotBase {
     type: "pending"
 }
-interface BookedSlot extends SlotBase {
+export interface BookedSlot extends SlotBase {
     type: "booked"
     personDetails: Person
 }
