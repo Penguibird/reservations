@@ -3,7 +3,6 @@ import { collection, addDoc, getDocs, onSnapshot } from '@firebase/firestore';
 import { firestoreData } from '../services/firebase';
 import Slot from '../types/Slot';
 import Reservation from '../types/Reservation';
-import Table from './table';
 //import {Fragment, useState, useEffect} from 'react';
 
 interface DayListProps extends Partial<React.PropsWithChildren<React.ReactHTMLElement<HTMLDivElement>>> {

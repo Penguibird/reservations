@@ -7,14 +7,14 @@ const SlotWrapper = styled('button')`
     margin: 0;
 `
 
-interface SlotProps extends Partial<React.PropsWithChildren<React.ReactHTMLElement<HTMLDivElement>>> {
+interface SlotProps extends Partial<React.PropsWithChildren<React.ReactHTMLElement<HTMLButtonElement>>> {
     slot: Slot
     book: () => void
 };
 
 const SlotComponent: React.FC<SlotProps> = ({ children, slot, book, ...props }) => {
     return <SlotWrapper {...props} onClick={book}>
-        
+
     </SlotWrapper>
 }
 
